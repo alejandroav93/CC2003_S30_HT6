@@ -1,6 +1,11 @@
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+/*
+PROGRAMADORES:
+Joonho Kim 18096
+Pablo Marroquín 19077
+*/
 
 class Main
 {

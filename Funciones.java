@@ -24,14 +24,7 @@ class Funciones
              String[] par= line.split("\\|");
             mapa.put(par[0], par[1]);
         }
-        /*Set< Map.Entry< String,String> > st = mapa.entrySet();    
-        //System.out.println("Hola");
-       for (Map.Entry< String,String> me:st) 
-       { 
-           System.out.print(me.getKey()+":"); 
-           System.out.println(me.getValue()); 
-       } */
-       //System.out.println(mapa.size()+""); 
+        
        br.close();
 
         return mapa;
