@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Main
 {
     public static void main(String[] args)
@@ -5,16 +8,18 @@ class Main
         Funciones f = new Funciones();
         try
         {
-            f.PrepareCards();
+            Map<String,String> map=f.PrepareCards();
+            Deck deck= new Deck(map);
+            deck.put("Madolche Butlerusk");
+            deck.put("Madolche Hootcake");
+            deck.put("Madolche Butlerusk");
+            deck.put("Madolche Butlerusk");
+            deck.put("Randy");
+            deck.printDeck();
         }
         catch(Exception e)
         {
             
         }
-        
-        /*String s = "Welcome|to |Baeldung";
-        String[] result = s.split("\\|");
-        for(int i=0;i<result.length;i++)
-        System.out.println(result[i]);*/
     }
 }

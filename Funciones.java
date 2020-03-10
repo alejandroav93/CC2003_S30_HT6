@@ -1,10 +1,12 @@
 import java.util.*;
+
+import javax.sound.sampled.SourceDataLine;
+
 /*import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.LinkedHashMap;*/
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Scanner;
 
 class Funciones
 {
@@ -14,45 +16,28 @@ class Funciones
      */
     public Map<String, String> PrepareCards() throws Exception
     {
-        MapFactory<String> mapFactory= new MapFactory<String>();
-        String tipo=PedirTipoDeImplementacion();
-        Map<String, String> mapa = mapFactory.getMap(tipo); 
+        Map<String, String> mapa = SelectMap();
         BufferedReader br = new BufferedReader(new FileReader("cards_desc.txt"));
         String line; 
         while ((line = br.readLine()) != null) 
         {
-             String[] par= line.split("\\|");
+            //= new String[2];
+            String[] par= line.split("\\|");
             mapa.put(par[0], par[1]);
         }
-        /*Set< Map.Entry< String,String> > st = mapa.entrySet();    
-        //System.out.println("Hola");
+        Set< Map.Entry< String,String> > st = mapa.entrySet();  
 
-       for (Map.Entry< String,String> me:st) 
-       { 
-           System.out.print(me.getKey()+":"); 
-           System.out.println(me.getValue()); 
-       } */
-       System.out.println(mapa.size()+""); 
+    //    for (Map.Entry< String,String> me:st) 
+    //    { 
+    //        System.out.print(me.getKey()+":"); 
+    //        System.out.println(me.getValue()); 
+    //    } 
        br.close();
-
         return mapa;
     }
 
-    String PedirTipoDeImplementacion()
+    Map<String, String> SelectMap() throws Exception
     {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Seleccione un tipo de Map:");
-        System.out.println("1)HashMap\n2)TreeMap\n3)LinkedHashMap");
-        String tipo="";
-        int opcion= scan.nextInt();
-        switch(opcion)
-        {
-            case 1: tipo="HashMap"; break;
-            case 2: tipo="TreeMap"; break;
-            case 3: tipo="LinkedHashMap"; break;
-            default: tipo="HashMap"; break;
-        }
-        return tipo;
+        return new HashMap<String, String>();
     }
-
 }
