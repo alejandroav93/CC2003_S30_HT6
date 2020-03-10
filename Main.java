@@ -8,14 +8,17 @@ class Main
         Funciones f = new Funciones();
         try
         {
-            Map<String,String> map=f.PrepareCards();
-            Deck deck= new Deck(map);
-            deck.put("Madolche Butlerusk");
-            deck.put("Madolche Hootcake");
-            deck.put("Madolche Butlerusk");
-            deck.put("Madolche Butlerusk");
-            deck.put("Randy");
-            deck.printDeck();
+            //hello Pablo aqui te dejo tests para que vayas probando que si funcionan
+            // Map<String,String> map=f.PrepareCards();
+            // Deck deck= new Deck(map);
+            // deck.put("Madolche Butlerusk");
+            // deck.put("Madolche Hootcake");
+            // deck.put("Madolche Butlerusk");
+            // deck.put("Madolche Butlerusk");
+            // deck.put("Macro Cosmos");
+            // deck.put("Machine Duplication");
+            // deck.printOrderedDeck();
+            // deck.printDeck();
         }
         catch(Exception e)
         {
