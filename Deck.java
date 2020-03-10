@@ -17,7 +17,7 @@ public class Deck{
     }
 
     //inciso 3
-    void printDeck(){
+    public void printDeck(){
         System.out.println("Cards on Deck:");
         for (int i=0;i<deck.size();i++){
             System.out.println(Arrays.toString(deck.get(i)));
@@ -25,7 +25,7 @@ public class Deck{
         }
 
         //inciso 4
-    void printOrderedDeck(){
+    public void printOrderedDeck(){
         System.out.println("Cartas tipo MONSTRUO:");
         for(int i=0;i<deck.size();i++){
             if(deck.get(i)[1].equals("Monstruo")){
@@ -47,7 +47,7 @@ public class Deck{
     }
 
     //inciso 5
-    void printMap(){
+    public void printMap(){
         Set<String> keysList=map.keySet();
         Object[] keysArray=keysList.toArray();
         for (int i = 0; i < map.size(); i++) 
@@ -118,7 +118,7 @@ public class Deck{
 }
 
 //inciso 2
-void showCard(Object cardName)
+public void showCard(Object cardName)
 {
     String type=map.get(cardName);
     System.out.println("The type for "+cardName.toString()+" is: "+type);
